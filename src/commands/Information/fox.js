@@ -4,8 +4,8 @@ const { EmbedBuilder } = require('discord.js');
 
 async function getFox() {
 	try {
-		const fox = await axios.get('https://randomfox.ca/floof/')
-		return fox
+		const fox = await axios.get('https://randomfox.ca/floof/');
+		return fox;
 	} catch (error) {
 		console.log(error);
 	}
@@ -17,13 +17,13 @@ module.exports = {
 		.setDescription("This will get a random fox"),
 	async execute(interaction) {
 		//console.log(interaction.options.getString('hexvalue'));
-		const fox = await getFox()
-		const contentEmbed = new EmbedBuilder()
+		const fox = await getFox();
+		const contentEmbed = new EmbedBuilder();
 		contentEmbed.setTitle('Random 🦊');
 		contentEmbed.setColor(0xFFA500);
 		console.log(fox.data.image);
-		contentEmbed.setURL(fox.data.image)
-		contentEmbed.setImage(fox.data.image)
+		contentEmbed.setURL(fox.data.image);
+		contentEmbed.setImage(fox.data.image);
 
 		await interaction.reply({ embeds: [contentEmbed] });
 	},
