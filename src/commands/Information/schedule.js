@@ -46,10 +46,10 @@ module.exports = {
     await interaction.reply(
       "I will send you recipe every 7:00 am, 11:00 am and 17:00 pm"
     );
-    //const strTest = "0 */1 * * * *"; // every 1 min
+    // const strTest = "0 */1 * * * *"; // every 1 min
     const str7am = "0 0 7 * * *";   // 7:00 am everyday
     const str11am = "0 0 11 * * *"; // 11:00 am everyday
-    const str17am = "0 0 17 * * *"; // 17:00 am everyday
+    const str17pm = "0 0 17 * * *"; // 17:00 pm everyday
     // 7:00 am everyday
     const task1 = cron.schedule(
       str7am,
@@ -76,7 +76,7 @@ module.exports = {
     // ---------------------------------------
     // 17:00 am everyday
     const task3 = cron.schedule(
-      str17am,
+      str17pm,
       async function() {
         const contentEmbed1 = await getDrinkRecipe();
         interaction.user.send({ embeds: [contentEmbed1] });

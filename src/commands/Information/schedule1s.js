@@ -47,9 +47,9 @@ module.exports = {
       "I will send you recipe every minute"
     );
     const strTest = "0 */1 * * * *"; // every 1 min
-    //const str7am = "0 0 7 * * *";   // 7:00 am everyday
-    //const str11am = "0 0 11 * * *"; // 11:00 am everyday
-    //const str17am = "0 0 17 * * *"; // 17:00 am everyday
+    // const str7am = "0 0 7 * * *";   // 7:00 am everyday
+    // const str11am = "0 0 11 * * *"; // 11:00 am everyday
+    // const str17pm = "0 0 17 * * *"; // 17:00 pm everyday
     // every 1 second
     const task1 = cron.schedule(
       strTest,
