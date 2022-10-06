@@ -39,7 +39,6 @@ module.exports = {
 			contentEmbed.addFields(arr);
 		}
 		
-
 		await interaction.reply({ embeds: [contentEmbed] });
 	},
 };

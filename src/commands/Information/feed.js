@@ -14,11 +14,11 @@ module.exports = {
   async execute(interaction) {
     const foodPicture = await getFoodPicture();
     const contentEmbed = new EmbedBuilder()
-    .setTitle("Random Food Picture 🥪 🤤")
-    // console.log(foodPicture);
-    .setURL(foodPicture.data.image)
-    .setImage(foodPicture.data.image);
+      .setTitle("Random Food Picture 🥪 🤤")
+      // console.log(foodPicture);
+      .setURL(foodPicture.data.image)
+      .setImage(foodPicture.data.image);
 
-    await interaction.reply({ embeds: [contentEmbed]});
+    await interaction.reply({ embeds: [contentEmbed] });
   }
 };
