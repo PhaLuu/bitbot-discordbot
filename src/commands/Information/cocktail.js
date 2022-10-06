@@ -13,7 +13,7 @@ async function getCocktail(searchText) {
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("cocktail")
+		.setName("cocktail1")
 		.setDescription("This will get the cocktail")
 		.addStringOption((option) =>
 		option

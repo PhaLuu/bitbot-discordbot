@@ -13,7 +13,7 @@ async function getFood(searchText) {
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("recipe")
+		.setName("recipe1")
 		.setDescription("This will get a cake food recipe")
 		.addStringOption((option) =>
 		option
