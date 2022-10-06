@@ -13,7 +13,7 @@ async function getDrink() {
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("drink1")
+		.setName("drink")
 		.setDescription("This will get a random drink"),
 	async execute(interaction) {
 		// console.log(interaction.options.getString('hexvalue'));

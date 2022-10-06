@@ -39,7 +39,7 @@ async function getDrinkRecipe() {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("drinkalarm1")
+    .setName("drinkalarm")
     .setDescription("Set alarm `minutes / hours` to get a drink recipe")
     .addStringOption((option) =>
       option
