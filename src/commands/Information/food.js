@@ -23,13 +23,13 @@ module.exports = {
 	),
 	async execute(interaction) {
 		console.log(interaction.options.getString("name"));
-		const food = await getFood(interaction.options.getString("name"));
-		const contentEmbed = new EmbedBuilder();
+		const food = await getFood(interaction.options.getString("name"))
+		const contentEmbed = new EmbedBuilder()
 		contentEmbed.setTitle(food.data.hits[0].recipe.label);
 		contentEmbed.setColor(0xFFA500);
 		console.log(food.data.hits[0].recipe.image);
-		contentEmbed.setURL(food.data.hits[0].recipe.url);
-		contentEmbed.setImage(food.data.hits[0].recipe.image);
+		contentEmbed.setURL(food.data.hits[0].recipe.url)
+		contentEmbed.setImage(food.data.hits[0].recipe.image)
 
 		await interaction.reply({ embeds: [contentEmbed] });
 	},
